@@ -1,3 +1,4 @@
+// Código inicial usado unicamente para testes
 #include <Arduino.h> 
 #include <Wire.h>    
 
