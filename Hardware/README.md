@@ -4,6 +4,7 @@ Este repositório contém o código-fonte e a documentação de hardware do proj
 
 O sistema monitora a aceleração do usuário em tempo real. Ao detectar um impacto (Força G elevada), ele emite um alerta sonoro local. Caso o usuário não cancele o alerta (indicando uma possível incapacitação), o dispositivo aciona um protocolo de emergência via Bluetooth Low Energy (BLE) para um aplicativo de smartphone.
 
+OBS: O código "teste.cpp" foi o código utilizado para teste inicial apenas para saber se os componentes vieram com defeito ou não. O código final é o "main.cpp" dentro da pasta src
 ---
 
 ## Esquemático simples dos pinos para melhor compreendimento do código:
