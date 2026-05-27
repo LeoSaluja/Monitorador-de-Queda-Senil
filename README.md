@@ -1,5 +1,6 @@
 # Monitorador-de-Queda-Senil
 Repositório para o trabalho de Projeto Integrador 2 do curso de Engenharia de Computação / UFSM.
+
 Alunos: Leonardo Sodré dos Santos - 202420389
         Augusto Viletti Piovesan -
         Alex Dalmolin Manfio - 
