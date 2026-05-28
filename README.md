@@ -4,7 +4,7 @@ Repositório para o trabalho de Projeto Integrador 2 do curso de Engenharia de C
 Alunos: Leonardo Sodré dos Santos - 202420389;
         Augusto V. Piovesan - 202420066;;
         Alex D. Manfio - 2024520012;
-        Lucas P. Togni - ;
+        Lucas P. Togni - 202420907;
 
 Este é um projeto de hardware e software desenvolvido com fins didáticos por alunos da UFSM, com o objetivo de monitorar e garantir a segurança de pessoas idosas.
 
