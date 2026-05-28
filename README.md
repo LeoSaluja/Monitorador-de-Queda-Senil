@@ -1,10 +1,10 @@
 # Monitorador-de-Queda-Senil
 Repositório para o trabalho de Projeto Integrador 2 do curso de Engenharia de Computação / UFSM.
 
-Alunos: Leonardo Sodré dos Santos - 202420389 /
-        Augusto Viletti Piovesan - /
-        Alex Dalmolin Manfio -  /
-        Lucas seilseilasiela - /
+Alunos: Leonardo Sodré dos Santos - 202420389;
+        Augusto V. Piovesan - 202420066;;
+        Alex D. Manfio - 2024520012;
+        Lucas P. Togni - ;
 
 Este é um projeto de hardware e software desenvolvido com fins didáticos por alunos da UFSM, com o objetivo de monitorar e garantir a segurança de pessoas idosas.
 
