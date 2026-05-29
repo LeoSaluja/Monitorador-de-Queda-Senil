@@ -22,4 +22,9 @@ O dispositivo utiliza um ESP32, uma bateria LiPo e um sensor acelerômetro/giros
   * **`README.md`**: Documento de texto dedicado a explicar a arquitetura lógica e o fluxo de execução do firmware embarcado.
   * **`platformio.ini`**: Arquivo de configuração global do ambiente de desenvolvimento, responsável pelas definições da placa, velocidade de comunicação serial e dependências de compilação.
   * **`teste.cpp`**: **Código inicial unicamente utilizado para teste e validação individual dos componentes físicos (sensores e atuadores).**
-* **`/App`**: Diretório destinado aos arquivos de código e módulos do aplicativo para dispositivo móvel.
+* **`/App`**: Pasta contendo o código para testes do aplicativo em um dispositivo móvel. Sua estrutura interna é organizada em:
+  * **`src/main/java/com/example/detectorqueda/MainActivity.java`**: Código-fonte principal do aplicativo Android.
+  * **`.gitignore`**: Bloqueia o envio da pasta `/build`, evitando que arquivos locais de compilação subam para o repositório.
+  * **`README.md`**: Arquivo de texto com explicações detalhadas das funcionalidades do código mobile.
+  * **`build.gradle.kts`**: Arquivo gerenciador do compilador e das dependências externas (como a API de GPS e permissões).
+  * **`proguard-rules.pro`**: Arquivo de regras para otimização, ofuscação e redução de tamanho do aplicativo final.
