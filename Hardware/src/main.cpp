@@ -8,9 +8,9 @@
 const int MPU_addr = 0x68; // Endereço I2C do MPU6050.
 const float valor_conversao = 16384.0; // Escala do MPU6050 (16.384 unidades por G).
 const int pbuzzer = 18; // Pino para o buzzer piezoelétrico.
-const int pbotao = 19; // Pino para o botão de cancelamento (Falso Positivo).
-const float valor_de_queda = 2.5; // Valor de G que indica uma queda.
-const unsigned long tempo_falsa_queda = 10000; // Janela de 10 segundos (em milissegundos).
+const int pbotao = 26; // Pino para o botão de cancelamento (Falso Positivo).
+const float valor_de_queda = 2.15; // Valor de G que indica uma queda.
+const unsigned long tempo_falsa_queda = 7000; // Janela de 7 segundos (em milissegundos).
 unsigned long tempoInicioAlerta = 0; 
 
 #define SERVICE_UUID        "4fafc201-1fb5-459e-8fcc-c5c9c331914b" 
@@ -25,7 +25,7 @@ enum EstadoSistema {
 };
 EstadoSistema estadoAtual = NORMAL; 
 
-// Permite que o ESP32 ouça o aplicativo
+// CLASSE DESCOMENTADA: Permite que o ESP32 ouça o aplicativo
 class CallbackDoAplicativo: public BLECharacteristicCallbacks {
     void onWrite(BLECharacteristic *pChar) {
       std::string valorRecebido = pChar->getValue();
@@ -59,13 +59,15 @@ void setup() {
   BLEServer *pServer = BLEDevice::createServer(); 
   BLEService *pService = pServer->createService(SERVICE_UUID); 
   
+  // A propriedade WRITE foi adicionada para o celular conseguir enviar o comando de reset
   pCharacteristic = pService->createCharacteristic( 
                       CHARACTERISTIC_UUID,
                       BLECharacteristic::PROPERTY_READ |
                       BLECharacteristic::PROPERTY_NOTIFY |
                       BLECharacteristic::PROPERTY_WRITE 
   );
-  //Vincula a função de ouvir o App à característica BLE
+  
+  // ATIVADO: Vincula a função de ouvir o App à característica BLE
   pCharacteristic->setCallbacks(new CallbackDoAplicativo()); 
 
   pCharacteristic->setValue("0"); 
